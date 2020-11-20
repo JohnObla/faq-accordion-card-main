@@ -53,7 +53,6 @@ body {
 }
 
 .question, h1 {
-    font-weight: 700;
     color: hsl(238, 29%, 16%);
 }
 
@@ -63,8 +62,14 @@ body {
     /* padding: 10px 0; */
 }
 
+.bold {
+    font-weight: 700;
+}
 .answer {
     padding-top: 15px;
+}
+
+.hide {
     display: none;
 }
 
