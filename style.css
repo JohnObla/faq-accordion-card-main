@@ -76,6 +76,11 @@ body {
 .answer {
     padding-top: 15px;
     line-height: 150%;
+    display: none;
+}
+
+.visible {
+    display: block;
 }
 
 .hide {

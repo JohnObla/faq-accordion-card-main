@@ -1,6 +1,4 @@
 const questionAnswers = document.body.querySelectorAll('.dropdown-set');
-const questions = document.body.querySelectorAll('.question');
-const answers = document.body.querySelectorAll('.answer');
 
 function getVariables(qa) {
     return {
@@ -15,7 +13,7 @@ function expandQuestion(qa) {
 
     qa.classList.add('expanded')
     question.classList.add('bold');
-    answer.classList.remove('hide');
+    answer.classList.add('visible');
     arrow.classList.add('flip');
 }
 
@@ -24,8 +22,8 @@ function closeQuestion(qa) {
 
     qa.classList.remove('expanded');
     question.classList.remove('bold');
+    answer.classList.remove('visible');
     arrow.classList.remove('flip');
-    answer.classList.add('hide');
 }
 
 for (const qa of questionAnswers) {
