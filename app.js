@@ -2,10 +2,16 @@ const questionAnswers = document.body.querySelectorAll('.dropdown-set');
 const questions = document.body.querySelectorAll('.question');
 const answers = document.body.querySelectorAll('.answer');
 
+function getVariables(qa) {
+    return {
+        question: qa.children[0],
+        answer: qa.children[1],
+        arrow: qa.children[0].children[0]
+    }
+}
+
 function expandQuestion(qa) {
-    const question = qa.children[0];
-    const answer = qa.children[1];
-    const arrow = question.children[0];
+    const { question, answer, arrow } = getVariables(qa);
 
     qa.classList.add('expanded')
     question.classList.add('bold');
@@ -14,9 +20,7 @@ function expandQuestion(qa) {
 }
 
 function closeQuestion(qa) {
-    const question = qa.children[0];
-    const answer = qa.children[1];
-    const arrow = question.children[0];
+    const { question, answer, arrow } = getVariables(qa);
 
     qa.classList.remove('expanded');
     question.classList.remove('bold');
