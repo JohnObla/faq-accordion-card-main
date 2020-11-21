@@ -66,6 +66,10 @@ body {
     float: right;
 }
 
+.flip {
+    transform: rotate(180deg);
+}
+
 .bold {
     font-weight: 700;
 }
