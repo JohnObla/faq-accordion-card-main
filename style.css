@@ -62,11 +62,16 @@ body {
     /* padding: 10px 0; */
 }
 
+.question-img {
+    float: right;
+}
+
 .bold {
     font-weight: 700;
 }
 .answer {
     padding-top: 15px;
+    line-height: 150%;
 }
 
 .hide {
