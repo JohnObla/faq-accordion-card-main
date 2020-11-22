@@ -39,13 +39,18 @@ for (const qa of questionAnswers) {
         }
     });
 
-    const { question } = getVariables(qa);
 
-    qa.addEventListener('mouseenter', () => {
-        question.classList.add('orange-text');
-    });
+    // Doesn't change color on hover if device uses touch
+    const tap = ("ontouchstart" in document.documentElement);
+    if (!tap) {
+        const { question } = getVariables(qa);
 
-    qa.addEventListener('mouseleave', () => {
-        question.classList.remove('orange-text');
-    });
+        qa.addEventListener('mouseenter', () => {
+            question.classList.add('orange-text');
+        });
+
+        qa.addEventListener('mouseleave', () => {
+            question.classList.remove('orange-text');
+        });
+    }
 }
