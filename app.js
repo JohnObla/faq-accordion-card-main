@@ -38,4 +38,14 @@ for (const qa of questionAnswers) {
             expandQuestion(qa);
         }
     });
+
+    const { question } = getVariables(qa);
+
+    qa.addEventListener('mouseenter', () => {
+        question.classList.add('orange-text');
+    });
+
+    qa.addEventListener('mouseleave', () => {
+        question.classList.remove('orange-text');
+    });
 }

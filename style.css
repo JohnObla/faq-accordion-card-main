@@ -53,7 +53,6 @@ body {
 .dropdown {
     display: flex;
     flex-direction: column;
-    /* justify-content: space-evenly; */
     height: 100%;
     width: 100%;
 }
@@ -65,6 +64,7 @@ body {
 .dropdown-set {
     border-bottom: solid 1px hsl(240, 5%, 91%);
     padding: 15px 0;
+    cursor: pointer;
 }
 
 .question, h1 {
@@ -72,9 +72,11 @@ body {
 }
 
 .question {
-    /* font-weight: 400; */
     font-size: 13px;
-    /* padding: 10px 0; */
+}
+
+.orange-text{
+    color: hsl(14, 88%, 65%);
 }
 
 .question-img {
